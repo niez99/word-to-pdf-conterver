@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word to PDF Converter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 40px 60px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+    h1 {
+      margin-bottom: 24px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #555;
+      text-align: left;
+    }
+    input[type="file"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Word to PDF Converter</h1>
+    <form id="uploadForm" action="/convert" method="post" enctype="multipart/form-data">
+      <label for="wordFile">Select Word file (.doc, .docx):</label>
+      <input type="file" id="wordFile" name="wordFile" accept=".doc,.docx" required />
+      <button type="submit">Convert to PDF</button>
+    </form>
+  </div>
+</body>
+</html>
